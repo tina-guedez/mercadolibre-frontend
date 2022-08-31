@@ -11,8 +11,7 @@ import Breadcrumb from '../SearchResult/components/Breadcrumb/Breadcrumb';
 
 function DetailData({ item }) {
   return (
-    <div className="data-detail-container">
-
+    <>
       <div className="data-detail-picture">
         <div className="picture-container">
           <img src={item?.picture} alt={item?.title} />
@@ -44,8 +43,7 @@ function DetailData({ item }) {
         <button type="button" className="buy"> Comprar </button>
 
       </div>
-
-    </div>
+    </>
   );
 }
 
@@ -56,8 +54,10 @@ export default function ItemDetail() {
   return (
     <div className="item-detail-container">
       <Breadcrumb categories={dataItem?.categories} />
-      <div className="wrapper">
-        <DetailData item={dataItemDetail?.item} />
+      <div className="card-detail">
+        <div className="wrapper">
+          <DetailData item={dataItemDetail?.item} />
+        </div>
       </div>
     </div>
   );
