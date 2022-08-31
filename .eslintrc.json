@@ -5,8 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb",
-        "prettier"
+        "airbnb"
     ],
     "overrides": [
     ],
@@ -18,5 +17,7 @@
         "react"
     ],
     "rules": {
+        "prefer-arrow-callback": "error",
+        "arrow-body-style": ["error", "always"]
     }
 }
