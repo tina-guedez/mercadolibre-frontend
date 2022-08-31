@@ -6,10 +6,12 @@
   "proxy": "http://localhost:3000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode production",
     "build": "webpack --mode production",
     "server": "nodemon ./api/index.js",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "dev:start": "webpack serve --mode development",
+    "dev:start-server": "nodemon ./api/index.js"
   },
   "repository": {
     "type": "git",
