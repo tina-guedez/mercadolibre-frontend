@@ -1,4 +1,4 @@
-import './Searchbar.css';
+import './SearchBar.css';
 import React from 'react';
 import SearchIcon from '../../assets/ic_Search@2x.png.png';
 

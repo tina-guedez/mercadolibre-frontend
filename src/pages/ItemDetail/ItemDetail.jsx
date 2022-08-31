@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useFindItem, useFindItemDetail } from '../../hooks/api';
 import './ItemDetail.css';
 
-import { getCurrency, getItemPrice, getCondition, getItemDecimals } from '../../utils/helpers';
+import {
+  getCurrency, getItemPrice, getCondition, getItemDecimals,
+} from '../../utils/helpers';
 
 import Breadcrumb from '../SearchResult/components/Breadcrumb/Breadcrumb';
 
@@ -23,7 +25,16 @@ function DetailData({ item }) {
 
       <div className="data-detail-product">
         <span className="sold-condition">
-          {getCondition(item?.condition)} - {item?.sold_quantity} vendidos </span>
+          {getCondition(item?.condition)}
+          {' '}
+          -
+          {' '}
+          {item?.sold_quantity}
+          {' '}
+          vendidos
+          {' '}
+
+        </span>
         <span className="title">{item?.title}</span>
         <span className="price">
           <span className="currency">{getCurrency(item?.price?.currency)}</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ResultItem.css';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getCurrency, getItemPrice } from '../../../../utils/helpers';
 import FreeShippingIcon from '../../../../assets/ic_shipping@2x.png.png';
 
