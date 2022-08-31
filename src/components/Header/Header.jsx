@@ -1,17 +1,14 @@
 import React from 'react';
 import './Header.css';
-import { SearchBar } from '../SearchBar/SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 
-export const Header = () => {
+export default function Header() {
   return (
-    <>
-      <header className="nav">
-        <div className="nav-menu">
-          <a href='/' tabIndex="0" className="nav-logo">
-          </a>
-          <SearchBar/>
-        </div>
-      </header>
-    </>
-  )
+    <header className="nav">
+      <div className="nav-menu">
+        <a href="/" tabIndex="0" className="nav-logo" />
+        <SearchBar />
+      </div>
+    </header>
+  );
 }
