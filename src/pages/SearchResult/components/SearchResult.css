@@ -1,0 +1,9 @@
+.container-search-result {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 50px;
+  row-gap: 0;
+}
+
+
+

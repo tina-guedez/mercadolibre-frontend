@@ -1,0 +1,9 @@
+.container-breadcrumb {
+  align-items: center;
+  color: #999;
+  display: flex;
+  font-size: 14px;
+  grid-column: 2/12;
+  height: 46px;
+}
+

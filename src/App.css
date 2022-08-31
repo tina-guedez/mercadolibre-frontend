@@ -1,0 +1,9 @@
+.container-main {
+  background: #eee;
+  font-family: -apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;;
+  min-height: 100%;
+  padding-bottom: 50px;
+  position: absolute;
+  width: 100%;
+}
+

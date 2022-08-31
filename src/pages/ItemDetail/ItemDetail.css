@@ -1,0 +1,86 @@
+.item-detail-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 50px;
+}
+
+.wrapper {
+  background-color: white;
+  border-radius: 4px;
+  color: #333;
+  grid-column: 2/12;
+  padding: 32px;
+}
+
+.data-detail-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.data-detail-description {
+  width: 680px;
+}
+
+.data-detail-description h2{
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.data-detail-description p {
+  color: #999;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 32px;
+  text-align: left;
+}
+
+.data-detail-container .data-detail-picture .picture-container {
+  height: 680px;
+  text-align: center;
+  width: 680px;
+}
+
+.picture-container img {
+  height: 680px;
+  width: 680px;
+}
+
+.data-detail-product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.data-detail-product .currency {
+  padding-right: 6px;
+}
+
+.data-detail-product .decimals {
+  font-size: 23px;
+  vertical-align: super;
+}
+
+.data-detail-product .sold-condition {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.data-detail-product .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.data-detail-product .price {
+  font-size: 46px;
+  padding: 32px 0;
+
+}
+
+.data-detail-product .buy{
+  background-color: #3483FA;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+}

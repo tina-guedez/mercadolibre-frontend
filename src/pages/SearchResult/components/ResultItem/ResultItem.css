@@ -1,0 +1,75 @@
+h2{
+  margin: 0;
+}
+.wrapper {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.result-list-container {
+  grid-column: 2/12;
+}
+
+.result-container { 
+  display: flex;
+  border-bottom: solid 1px #eee;
+  margin: 16px;
+}
+
+.result-container:last-child {
+  border-bottom: none;
+}
+.item-container {
+  display: grid;
+  grid-template-columns: auto auto 200px;
+}
+
+.result-list-container .product-picture {
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+.result-list-container .product-picture .picture-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+}
+
+.result-list-container .product-data{
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  width: 100%;
+  position: relative;
+}
+.result-list-container .product-data .product-title{
+  padding-top: 32px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+}
+.result-list-container .product-data .product-title h2{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.result-list-container .product-price {
+  font-size: 24px;
+}
+
+.result-list-container .product-price .currency{
+  margin-right: 6px
+}
+
+.result-list-container .product-price .icon {
+  width: 18px;
+  height: 18px;
+  padding-left: 6px;
+}
+
+.result-list-container .product-address {
+  font-size: 12px;
+  padding-left: 50%;
+  position: absolute;
+  left: 22%;
+  color: #999;
+}
