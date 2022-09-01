@@ -9,9 +9,9 @@ function ItemData({ item }) {
     <div className="item-container">
 
       <div className="product-picture">
-        <Link to={`/items/${item?.id}`}>
+        <a href={`/items/${item?.id}`}>
           <img className="picture-img" src={item?.picture} alt={item?.title} />
-        </Link>
+        </a>
       </div>
 
       <div className="product-data">
@@ -20,9 +20,9 @@ function ItemData({ item }) {
           <span>{getItemPrice(item?.price?.amount, item?.price?.decimals)}</span>
           <span>{item?.free_shipping && <img className="icon" src={FreeShippingIcon} alt="Icono envío gratis" />}</span>
         </div>
-        <Link to={`/items/${item?.id}`} className="product-title">
+        <a href={`/items/${item?.id}`} className="product-title">
           <h2>{item?.title}</h2>
-        </Link>
+        </a>
       </div>
 
       <div className="product-address">
