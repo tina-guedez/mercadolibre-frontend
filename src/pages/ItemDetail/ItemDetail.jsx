@@ -50,7 +50,7 @@ function DetailData({ item }) {
 export default function ItemDetail() {
   const { id } = useParams();
   const { dataItemDetail } = useFindItemDetail(id);
-  const { dataItem } = useFindItem(dataItemDetail?.items?.title);
+  const { dataItem } = useFindItem(dataItemDetail?.item?.title);
   return (
     <div className="item-detail-container">
       <Breadcrumb categories={dataItem?.categories} />
