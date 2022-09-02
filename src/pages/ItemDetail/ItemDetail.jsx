@@ -55,7 +55,7 @@ export default function ItemDetail() {
     <div className="item-detail-container">
       <Breadcrumb categories={dataItem?.categories} />
       <div className="card-detail">
-        <div className="wrapper">
+        <div className="wrapper-data-detail">
           <DetailData item={dataItemDetail?.item} />
         </div>
       </div>
