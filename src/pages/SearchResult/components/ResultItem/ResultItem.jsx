@@ -1,5 +1,6 @@
 import React from 'react';
 import './ResultItem.css';
+import { Link } from 'react-router-dom';
 import { getCurrency, getItemPrice } from '../../../../utils/helpers';
 import FreeShippingIcon from '../../../../assets/ic_shipping@2x.png.png';
 
@@ -8,9 +9,9 @@ function ItemData({ item }) {
     <div className="item-container">
 
       <div className="product-picture">
-        <a href={`/items/${item?.id}`}>
+        <Link to={`/items/${item?.id}`}>
           <img className="picture-img" src={item?.picture} alt={item?.title} />
-        </a>
+        </Link>
       </div>
 
       <div className="product-data">
@@ -19,9 +20,9 @@ function ItemData({ item }) {
           <span>{getItemPrice(item?.price?.amount, item?.price?.decimals)}</span>
           <span>{item?.free_shipping && <img className="icon" src={FreeShippingIcon} alt="Icono envío gratis" />}</span>
         </div>
-        <a href={`/items/${item?.id}`} className="product-title">
+        <Link to={`/items/${item?.id}`} className="product-title">
           <h2>{item?.title}</h2>
-        </a>
+        </Link>
       </div>
 
       <div className="product-address">
