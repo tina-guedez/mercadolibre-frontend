@@ -16,8 +16,8 @@ function App() {
   return (
     <Suspense fallback={<>...</>}>
       <div className="container-main">
-        <Header />
         <Router>
+          <Header />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/items" element={<SearchResult />} />
