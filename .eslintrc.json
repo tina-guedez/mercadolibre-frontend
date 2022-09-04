@@ -1,10 +1,12 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest/globals": true
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:jest/recommended",
         "airbnb"
     ],
     "overrides": [
@@ -14,7 +16,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", "jest"
     ],
     "rules": {
         "prefer-arrow-callback": "error",
