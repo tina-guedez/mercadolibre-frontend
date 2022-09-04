@@ -1,9 +1,9 @@
 import React from 'react';
 import './SearchResult.css';
-import Breadcrumb from './Breadcrumb/Breadcrumb';
-import { useFindItem } from '../../../hooks/api';
-import { useQueryParams } from '../../../utils/helpers';
-import ResultItem from './ResultItem/ResultItem';
+import Breadcrumb from './components/Breadcrumb/Breadcrumb';
+import { useFindItem } from '../../hooks/api';
+import { useQueryParams } from '../../utils/helpers';
+import ResultItem from './components/ResultItem/ResultItem';
 
 export default function SearchResult() {
   const { q } = useQueryParams();

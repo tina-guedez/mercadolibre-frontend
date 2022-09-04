@@ -8,7 +8,7 @@ import Header from './components/Header/Header';
 import './App.css';
 
 // Importaciones dinámicas para uso de lazy. Permite cargar un componente solo cuando es llamado.
-const SearchResult = React.lazy(() => { return import('./pages/SearchResult/components/SearchResult'); });
+const SearchResult = React.lazy(() => { return import('./pages/SearchResult/SearchResult'); });
 const ItemDetail = React.lazy(() => { return import('./pages/ItemDetail/ItemDetail'); });
 const Home = React.lazy(() => { return import('./pages/Home/Home'); });
 
