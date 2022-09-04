@@ -5,7 +5,9 @@
   "main": "index.js",
   "proxy": "http://localhost:3000",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest ",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
     "start": "webpack serve --mode production",
     "build": "webpack --mode production",
     "server": "nodemon ./api/index.js",
