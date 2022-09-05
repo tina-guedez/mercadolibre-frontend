@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
-import { render } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import SearchBar from '../components/SearchBar/SearchBar';
 
 describe('Pruebas en el componente SearchBar', () => {
@@ -13,5 +13,11 @@ describe('Pruebas en el componente SearchBar', () => {
   it('Si hace match con el snapshot', () => {
     const { container } = render(<SearchBar />);
     expect(container).toMatchSnapshot();
+  });
+  test('Cambio de valor en casilla de texto', () => {
+    render(<SearchBar />);
+    const input = screen.getByLabelText('Ingresa el producto a buscar');
+    fireEvent.input(input, { target: { value: 'Termo' } });
+    expect(input.value).toBe('Termo');
   });
 });
