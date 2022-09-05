@@ -6,7 +6,7 @@ export default function SearchBar() {
   return (
     <form className="nav-search" action="/items" method="GET" role="search">
       <input
-        aria-label="Ingresá lo que quieras encontrar"
+        aria-label="Ingresa el producto a buscar"
         autoComplete="off"
         className="nav-search-input"
         maxLength="120"
