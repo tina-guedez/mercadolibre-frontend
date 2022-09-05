@@ -11,7 +11,7 @@ export default function SearchResult() {
   const categories = dataItem?.categories;
   return (
     <div className="container-search-result">
-      { dataItem && (
+      { dataItem && categories && (
         <>
           <Breadcrumb categories={categories} />
           <ResultItem items={dataItem?.items} />

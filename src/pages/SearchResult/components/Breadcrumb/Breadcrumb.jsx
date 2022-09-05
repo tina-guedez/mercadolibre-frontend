@@ -1,7 +1,8 @@
 import React from 'react';
 import './Breadcrumb.css';
+import PropTypes from 'prop-types';
 
-export default function Breadcrumb({ categories }) {
+export default function Breadcrumb({ categories = [] }) {
   return (
     <div className="container-breadcrumb">
       {categories && categories.map((category, i, arr) => {
@@ -12,3 +13,8 @@ export default function Breadcrumb({ categories }) {
     </div>
   );
 }
+
+Breadcrumb.propTypes = {
+  // eslint-disable-next-line react/require-default-props
+  categories: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
+};

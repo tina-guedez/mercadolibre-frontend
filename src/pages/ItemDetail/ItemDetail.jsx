@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import PropTypes, { object } from 'prop-types';
 import { useFindItem, useFindItemDetail } from '../../hooks/api';
 import './ItemDetail.css';
 
@@ -9,7 +10,7 @@ import {
 
 import Breadcrumb from '../SearchResult/components/Breadcrumb/Breadcrumb';
 
-function DetailData({ item }) {
+function DetailData({ item = {} }) {
   return (
     <>
       <div className="data-detail-picture">
@@ -53,12 +54,21 @@ export default function ItemDetail() {
   const { dataItem } = useFindItem(dataItemDetail?.items?.title);
   return (
     <div className="item-detail-container">
-      <Breadcrumb categories={dataItem?.categories} />
-      <div className="card-detail">
-        <div className="wrapper-data-detail">
-          <DetailData item={dataItemDetail?.item} />
-        </div>
-      </div>
+      { dataItem && dataItemDetail && (
+        <>
+          <Breadcrumb categories={dataItem?.categories} />
+          <div className="card-detail">
+            <div className="wrapper-data-detail">
+              <DetailData item={dataItemDetail?.item} />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
+
+DetailData.propTypes = {
+  // eslint-disable-next-line react/require-default-props
+  item: PropTypes.objectOf(Object),
+};

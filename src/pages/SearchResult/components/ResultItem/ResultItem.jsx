@@ -1,10 +1,11 @@
 import React from 'react';
 import './ResultItem.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getCurrency, getItemPrice } from '../../../../utils/helpers';
 import FreeShippingIcon from '../../../../assets/ic_shipping@2x.png.png';
 
-function ItemData({ item }) {
+function ItemData({ item = {} }) {
   return (
     <div className="item-container">
 
@@ -32,7 +33,7 @@ function ItemData({ item }) {
   );
 }
 
-export default function ResultItem({ items }) {
+export default function ResultItem({ items = [] }) {
   return (
     <div className="wrapper result-list-container">
       {items && items.map((item) => {
@@ -45,3 +46,13 @@ export default function ResultItem({ items }) {
     </div>
   );
 }
+
+ResultItem.propTypes = {
+  // eslint-disable-next-line react/require-default-props
+  items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
+};
+
+ItemData.propTypes = {
+  // eslint-disable-next-line react/require-default-props
+  item: PropTypes.objectOf(Object),
+};
