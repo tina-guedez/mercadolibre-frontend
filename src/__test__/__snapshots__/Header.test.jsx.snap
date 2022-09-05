@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente Header Si hace match con el snapshot 1`] = `
+<div>
+  <header
+    class="nav"
+  >
+    <div
+      class="nav-menu"
+    >
+      <a
+        class="nav-logo"
+        href="/"
+        tabindex="0"
+      />
+      <form
+        action="/items"
+        class="nav-search"
+        method="GET"
+        role="search"
+      >
+        <input
+          aria-label="Ingresa el producto a buscar"
+          autocomplete="off"
+          class="nav-search-input"
+          maxlength="120"
+          name="q"
+          placeholder="Nunca dejes de buscar"
+          required=""
+          tabindex="0"
+          type="text"
+        />
+        <button
+          class="nav-search-btn"
+          tabindex="-1"
+          type="submit"
+        >
+          <img
+            aria-label="Buscar"
+            class="nav-icon-search"
+            src="test-file-stub"
+          />
+        </button>
+      </form>
+    </div>
+  </header>
+</div>
+`;
