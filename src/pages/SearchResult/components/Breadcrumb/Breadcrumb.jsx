@@ -1,7 +1,7 @@
 import React from 'react';
 import './Breadcrumb.css';
 
-export default function Breeadcrumb({ categories }) {
+export default function Breadcrumb({ categories }) {
   return (
     <div className="container-breadcrumb">
       {categories && categories.map((category, i, arr) => {
