@@ -1,8 +1,10 @@
 import useSWR from 'swr';
 import { useDataFetchItem, useDataFetchItemDetail } from './items';
 
+const KEY_BASE_SWR = '/api/items';
+
 export const useFindItem = (q) => {
-  const { data, error } = useSWR('dataFetchItem', async () => {
+  const { data, error } = useSWR(`${KEY_BASE_SWR}?q=${q}`, async () => {
     const dataFetch = await useDataFetchItem(q);
     return dataFetch;
   });
@@ -16,7 +18,7 @@ export const useFindItem = (q) => {
 };
 
 export const useFindItemDetail = (id) => {
-  const { data, error } = useSWR('dataFetchItemDetail', async () => {
+  const { data, error } = useSWR(`${KEY_BASE_SWR}/${id}`, async () => {
     const dataFetch = await useDataFetchItemDetail(id);
     return dataFetch;
   });
