@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import { useFindItem, useFindItemDetail } from '../../hooks/api';
 import './ItemDetail.css';
 
@@ -42,7 +42,6 @@ function DetailData({ item = {} }) {
           <span className="decimals">{getItemDecimals(item?.price?.amount)}</span>
         </span>
         <button type="button" className="buy"> Comprar </button>
-
       </div>
     </>
   );
@@ -52,9 +51,16 @@ export default function ItemDetail() {
   const { id } = useParams();
   const { dataItemDetail } = useFindItemDetail(id);
   const { dataItem } = useFindItem(dataItemDetail?.items?.title);
+  const [showItem, setShowItem] = useState();
+
+  useEffect(() => {
+    const values = Object.entries(dataItemDetail).length !== 0;
+    if (values) setShowItem(values);
+  }, [dataItemDetail]);
+
   return (
     <div className="item-detail-container">
-      { dataItem && dataItemDetail && (
+      { showItem && (
         <>
           <Breadcrumb categories={dataItem?.categories} />
           <div className="card-detail">
