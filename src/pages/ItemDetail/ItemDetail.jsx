@@ -51,13 +51,7 @@ export default function ItemDetail() {
   const { id } = useParams();
   const { dataItemDetail } = useFindItemDetail(id);
   const { dataItem } = useFindItem(dataItemDetail?.items?.title);
-  const [showItem, setShowItem] = useState();
-
-  useEffect(() => {
-    const values = Object.entries(dataItemDetail).length !== 0;
-    if (values) setShowItem(values);
-  }, [dataItemDetail]);
-
+  const showItem = Object.entries(dataItemDetail).length !== 0;
   return (
     <div className="item-detail-container">
       { showItem && (
