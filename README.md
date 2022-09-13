@@ -35,3 +35,8 @@ npm run build
 ```bash
 npm run lint
 ```
+
+- Ejecución de pruebas unitarias.
+```bash
+npm run test
+```
